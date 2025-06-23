@@ -8,16 +8,16 @@ This tutorial will walk you through a specific analysis of some Efficient Locali
 Our lab doesn't have a standard pipeline everyone uses, which is unusual. EvLab, for example, has everyone use the exact same code for processing their fMRI data using SPM. There are pros and cons to each approach. This tutorial will use the [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki) pipeline I mainly wrote, by cobbling together code from Pramod, Ratan Murty (former Kanwisher Lab postdoc, current Georgia Tech professor), and Rui Xu (current postdoc in Desimone Lab).
 
 ## Table of contents
-* [From the scanner to brain maps (first-level analyses)](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#from-the-scanner-to-brain-maps-first-level-analyses)
-> * [Setting up the directory](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#setting-up-the-project-directory)
-> * [Unpacking the data from the scanner](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#getting-the-raw-data-dicoms-from-the-scanner)
-> * [Anatomical reconstruction](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#reconstructing-the-anatomical-scan)
-> * [Opening FreeView, visualizing anatomicals](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#visualizing-the-anatomicals-with-freeview)
-> * [Running the contrast analyses](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#running-the-analyses)
-> * [Visualizing the FFA and language network](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#visualizing-the-contrast-results)
-* [From brain maps to bar plots (second-level analyses)](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#from-brain-maps-to-bar-plots-second-level-analyses)
-> * [Transforming parcels to subject-space](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#transforming-parcels-to-subject-space)
-> * [Loading and plotting data with Python](https://github.mit.edu/kanlab/lab/wiki/fMRI-pre-processing-and-analysis#loading-and-plotting-data-with-python)
+* [From the scanner to brain maps (first-level analyses)](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#from-the-scanner-to-brain-maps-first-level-analyses)
+> * [Setting up the directory](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#setting-up-the-project-directory)
+> * [Unpacking the data from the scanner](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#getting-the-raw-data-dicoms-from-the-scanner)
+> * [Anatomical reconstruction](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#reconstructing-the-anatomical-scan)
+> * [Opening FreeView, visualizing anatomicals](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#visualizing-the-anatomicals-with-freeview)
+> * [Running the contrast analyses](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#running-the-analyses)
+> * [Visualizing the FFA and language network](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#visualizing-the-contrast-results)
+* [From brain maps to bar plots (second-level analyses)](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#from-brain-maps-to-bar-plots-second-level-analyses)
+> * [Transforming parcels to subject-space](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#transforming-parcels-to-subject-space)
+> * [Loading and plotting data with Python](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main?tab=readme-ov-file#loading-and-plotting-data-with-python)
 
 ## From the scanner to brain maps (first-level analyses)
 
