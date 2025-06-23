@@ -118,15 +118,15 @@ You'll need to make the following sub-directories in `{project_dir}`:
 > * You probably don't need 24 hours and 50GB of memory, so set those to something more reasonable like 5 hours with 10GB for now.
 3. To open a terminal in your Xfce session, click `Applications` --> `Terminal Emulator`.
 4. To open Freeview, the standard FreeSurfer visualization tool, simply type: `freeview` in the terminal.
-5. You should now see a GUI that looks like this: ![empty freeview screen](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/empty_freeview.png)
+5. You should now see a GUI that looks like this: ![empty freeview screen](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/empty_freeview.png)
 
 #### Visualizing "in the volume"
 
 6. To open the anatomical scan, click on `File` --> `Load Volume`, then the file icon.
 7. This should bring up your home directory, and if you've copied by `.bashrc`, then one of the subdirectories here should be called `data`, and this is where you'll find the files pointed to by your `$PROJ_DIR` environment variable (which should be set to the `{project_dir}`).
-8. Click `data` --> `recons` --> `kaneff01` --> `mri` --> **`orig.mgz`**. This should take you back to a menu which looks like this: ![anatomical loading menu](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/load_anat.png)
-9. Make sure the "Color map" is set to "Grayscale," then click "Okay". This should load in the anatomical scan, which looks like this: ![anatomical image](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/anat.png)
-10. If your view is set to something different, you can change the layout and orientation with these buttons along the top of the window: ![buttons to change view](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/layout.png)
+8. Click `data` --> `recons` --> `kaneff01` --> `mri` --> **`orig.mgz`**. This should take you back to a menu which looks like this: ![anatomical loading menu](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/load_anat.png)
+9. Make sure the "Color map" is set to "Grayscale," then click "Okay". This should load in the anatomical scan, which looks like this: ![anatomical image](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/anat.png)
+10. If your view is set to something different, you can change the layout and orientation with these buttons along the top of the window: ![buttons to change view](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/layout.png)
 11. I like to set these to "1 & 3 Horizontal" and "Coronal," respectively, which is what you see in the screenshot above.
 12. The image which has the blue, green, and red bars can be rotated around by clicking and dragging, and you can slide these bars by clicking and dragging them to change which slice you're viewing. Try playing around with this! If you want to reset to the initial view, press the button which has the two blue arrows pointing at each other along the top, next to the view-change buttons.
 13. By clicking anywhere on the main image, you can move the red cursor to that point, which will show that point in the other slices as well. 
@@ -136,8 +136,8 @@ You'll need to make the following sub-directories in `{project_dir}`:
 14. What we just looked at is called the "volume," since it is a 3D shape which we can move through (with the sliders).
 15. We can also look at the "surface" of the brain, which is a reconstruction based on this anatomical file. We'll go through how to load that now.
 16. Click the "Close Volume" button (the face with the red X) beneath the "Volumes" window on the left to clear the anatomical scan.
-17. Click `File` --> `Load Surface`, and navigate to `data` --> `recons` --> `kaneff01` --> `surf`, then open the file **`lh.inflated`**. Select "3D" from the view-change buttons (looks like a 3D face), and you should see this: ![red and green surface](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/red_green_surf.png)
-18. This is someone's left hemisphere! The "inflated" part means that the sulci (valleys between the peaks, or gyri) have been expanded to be on a flat surface. From the left-side buttons, click "Curvature" and select "Binary". This should load the brain in a more standard black-and-white, which looks like this: ![black and white surface](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/gray_surf.png)
+17. Click `File` --> `Load Surface`, and navigate to `data` --> `recons` --> `kaneff01` --> `surf`, then open the file **`lh.inflated`**. Select "3D" from the view-change buttons (looks like a 3D face), and you should see this: ![red and green surface](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/red_green_surf.png)
+18. This is someone's left hemisphere! The "inflated" part means that the sulci (valleys between the peaks, or gyri) have been expanded to be on a flat surface. From the left-side buttons, click "Curvature" and select "Binary". This should load the brain in a more standard black-and-white, which looks like this: ![black and white surface](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/gray_surf.png)
 19. By clicking and dragging the brain around, you can rotate it to see different views.
 20. Try loading a right-hemisphere surface, as well as some different kinds of surfaces, like `pial` or `orig`!
 
@@ -145,12 +145,12 @@ You'll need to make the following sub-directories in `{project_dir}`:
 
 1. Go ahead and close Freeview by clicking the "Exit" button in the top-right corner.
 2. Make sure you've loaded the `matlab` module, either by copying that section from my `.bashrc` or by running `module load mit/matlab/2020a` in your Xfce terminal.
-3. Navigate to the `{project_dir}`, and open Matlab by simply typing `matlab`. You should see something which looks like this: ![blank matlab screen](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/blank_matlab.png)
+3. Navigate to the `{project_dir}`, and open Matlab by simply typing `matlab`. You should see something which looks like this: ![blank matlab screen](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/blank_matlab.png)
 
 #### Paradigm (para) files
 4. Let's open a para file to talk a bit more about what's going on there. Double-click on `paras_vis/kaneff01/kaneff01_1_vis.para` to open it. It should look like this: 
 
-![para file](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/para.png)
+![para file](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/para.png)
 > * If you haven't already watched [Idan Blank's excellent videos on fMRI analyses](https://www.youtube.com/watch?v=qgKm3EayUWY), they will help a lot in making sense of what's going on here (as well as the later analyses). I recommend highly!
 5. This file tells FreeSurfer what kind of stimulus we presented to the subject, when we presented it, and for how long. The three columns encode all this information:
 > * The first column, in seconds, lists the onset of each condition.
@@ -161,28 +161,28 @@ You'll need to make the following sub-directories in `{project_dir}`:
 7. It's best practice to have your experiment script (what you actually run during the scan) output para files for each subject and each run.
 
 #### Using the analysis scripts
-8. In Matlab, open the `data` --> `dicoms` --> `kaneff01` --> **`dicom.info`** by double-clicking on it. You should see this: ![dicom.info](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/kaneff01_dicom_info.png)
+8. In Matlab, open the `data` --> `dicoms` --> `kaneff01` --> **`dicom.info`** by double-clicking on it. You should see this: ![dicom.info](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/kaneff01_dicom_info.png)
 > * We'll be referring to this as we fill in the information in the scripts, so keep it open!
 9. Now, navigate to `{project_dir}/scripts`. You should see the four main scripts we'll be using, called:
 > * `batch_process_rx.m`: this is where we'll fill in most of the info for the analyses
 > * `prep_analysis_rx.m`: this is where we tell FreeSurfer what kind of analyses to do, as well as what **contrasts** to run
 > * `make_L2_rx.m`: this will create the data structure which holds all the variables we need under `{project_dir}/analysis`
 > * `block_analysis_rx.m`: this is what actually runs the analyses we specify!
-10. Open `batch_process_rx.m`. It should look like this: ![batch_process_rx.m](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/batch_process.png)
+10. Open `batch_process_rx.m`. It should look like this: ![batch_process_rx.m](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/batch_process.png)
 11. If you scroll down a bit, you'll see a commented-out example of how to include a subject. A few things to note:
 > * `subj_id` should be a string that matches the `recon`, `data/dicoms`, and `paras_{experiment}` folders
 > * `tasks` should be a cell array of strings, with the names matching the `{experiment}` in the `paras_{experiment}` folders
 > * `tasks_runs` should be a cell array of double arrays, where each double array lists the runs (found in `dicom.info`) associated with each task. Here, we can see that the subject did two runs of a language localizer in runs 23 and 24.
 > * The rest of the variables are blank, since we didn't do any field maps or DTI runs. These are beyond the scope of this tutorial, so we'll skip those for now.
-12. First, a bit more info about the experiments we'll be analyzing in this tutorial. This is data from [the Efficient Localizer](https://github.mit.edu/kanlab/lab/blob/master/documents/effloc_submission.pdf), which uses simultaneous video and audio. We've already gone through the visual conditions in the para file above. The auditory conditions are: 1—**false belief stories (in English)**, 2—**false photo stories (in English)**, 3—**nonwords**, 4—**quilted speech**, and 5—**math problems**. If you want a sense for the simultaneous presentation, you can watch the video linked in the para section with audio on. Despite these being presented simultaneously, we'll analyze them separately, as the `vis` and `aud` experiments (which you should have para files for). Here's a schematic from our paper on the localizer: ![effloc_fig1](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/effloc_fig1.png)
+12. First, a bit more info about the experiments we'll be analyzing in this tutorial. This is data from [the Efficient Localizer](https://github.mit.edu/kanlab/lab/blob/master/documents/effloc_submission.pdf), which uses simultaneous video and audio. We've already gone through the visual conditions in the para file above. The auditory conditions are: 1—**false belief stories (in English)**, 2—**false photo stories (in English)**, 3—**nonwords**, 4—**quilted speech**, and 5—**math problems**. If you want a sense for the simultaneous presentation, you can watch the video linked in the para section with audio on. Despite these being presented simultaneously, we'll analyze them separately, as the `vis` and `aud` experiments (which you should have para files for). Here's a schematic from our paper on the localizer: ![effloc_fig1](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/effloc_fig1.png)
 13. Now let's fill in the info for the `vis` and `aud` experiments which we have para files for. Scroll back up to the un-commented subject information at the top of the code block.
 > * `subj_id` should be `'kaneff01'`
 > * `tasks` should be `{'vis', 'aud'}`
 > * `tasks_runs` should be `{[8,9,10,11,12],[8,9,10,11,12]}`. Since the conditions were simultaneous, we use the same run numbers for both the `vis` and `aud` experiments. You can see in `dicom.info` that the "effloc" (short for Efficient Localizer) runs are listed as 7-12, but that run 7 has an `err` in the status column, while 8-12 say `ok`. That means there was some error during run 7 (I don't remember what it was now), so we won't use it.
 14. Before we actually run these analyses, let's take a look at the other scripts and what they do. If you scroll to the bottom of `batch_process`, you'll see that it calls `prep_analysis_rx.m`. Go ahead and open `prep_analysis`.
-15. You can ignore the first part of this script, but scroll down until you see the binary flags called `do_volume`, `do_surface`, etc. This is where we tell FreeSurfer what kinds of analyses we want to do. It should look like this: ![prep_analysis_flags](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/prep_analysis_flags.png)
+15. You can ignore the first part of this script, but scroll down until you see the binary flags called `do_volume`, `do_surface`, etc. This is where we tell FreeSurfer what kinds of analyses we want to do. It should look like this: ![prep_analysis_flags](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/prep_analysis_flags.png)
 16. For now, we want to set `do_volume`, `do_surface`, `do_preproc`, `make_analysis`, and `do_selxavg` to `1`, and to set the rest to `0`. In English, this means we want to preprocess the data (`do_preproc`), run a GLM with some specified parameters (`make_analysis`), and use the default FreeSurfer algorithm to run the GLM (`do_selxavg`), and do all of these both in the volume and on the surface (`do_volume` and `do_surface`).
-17. Now scroll down a bit farther, and you should see where we're defining the **contrasts** we want to analyze. That section should look like this, but with fewer contrasts: ![visual_contrasts](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/visual_contrasts.png)
+17. Now scroll down a bit farther, and you should see where we're defining the **contrasts** we want to analyze. That section should look like this, but with fewer contrasts: ![visual_contrasts](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/visual_contrasts.png)
 > * You'll need a different block like this for each experiment that you run, you should see blocks here for both `vis` and `aud`.
 18. The first few entries here should be pretty self-explanatory, where you list the number of conditions (including fixation), the length of each condition, and the names of the para files.
 19. The trickier part is defining your contrasts. Let's look at one particular line to break it down: 
@@ -226,20 +226,20 @@ There are a few key steps in this function, which you shouldn't have to make any
 
 #### Visualizing the FFA in the volume
 3. Open the `orig.mgz` volume the same way as before.
-4. Now, click `File` --> `Load Volume`, then the file icon. Navigate to `vols_vis` --> `kaneff01` --> `bold` --> `vis.sm3.all` --> `F-O`, then double-click on `sig.nii.gz`. This should take you back to a menu that looks like this: ![load_f_o](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/load_f_o.png)
-5. You want to change the "Color map" to "Heat," then click the green "Okay" button to load the image. That should look like this: ![f_o_nothresh](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/f_o_nothresh.png)
+4. Now, click `File` --> `Load Volume`, then the file icon. Navigate to `vols_vis` --> `kaneff01` --> `bold` --> `vis.sm3.all` --> `F-O`, then double-click on `sig.nii.gz`. This should take you back to a menu that looks like this: ![load_f_o](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/load_f_o.png)
+5. You want to change the "Color map" to "Heat," then click the green "Okay" button to load the image. That should look like this: ![f_o_nothresh](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/f_o_nothresh.png)
 6. To threshold the significance maps at reasonable (uncorrected) values, we usually set the "min" parameter to `3` and the "max" parameter to `5`. This means that all p-values less-significant than 10^-**3** will be ignored, and all values more-significant than 10^**-5** will be shown in yellow, with the red-yellow gradient between these values. You should see those "min" and "max" settings on the gray panel to the left of the image.
-7. Once you set those thresholds, the image should look like this: ![f_o_thresh](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/f_o_thresh.png)
-8. Surf through the image (with the green slider) until you see a slice that looks like this: ![FFA](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/ffa.png)
+7. Once you set those thresholds, the image should look like this: ![f_o_thresh](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/f_o_thresh.png)
+8. Surf through the image (with the green slider) until you see a slice that looks like this: ![FFA](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/ffa.png)
 9. That yellow blob on the left-ventral part of the brain is [the fusiform face area, or the FFA](https://pubmed.ncbi.nlm.nih.gov/9151747/)! The larger yellow blob a little higher on the brain is the part of the superior temporal sulcus that responds to dynamic videos of faces, or [the faceSTS](https://www.sciencedirect.com/science/article/pii/S1053811911003466)!
 > * Note that because of radiological convention, the left-right axis is flipped in these images—you should see a little "R" on the left border of the image, and a "L" on the right border. So, the FFA we're looking at is really in the right hemisphere, but shows up here on the left side.
 
 #### Visualizing the language network on the surface
 10. Close both the `sig.nii.gz` and the `orig.mgz` volumes with the red X, same as before.
 11. Open the left-hemisphere inflated surface.
-12. Now, confusingly, instead of loading another surface to visualize the aud.sm3.all.lh results, we have to load them as an "Overlay." To do that, click on the "Overlay" dropdown menu in the gray left-hand column and select "Load generic," then click on the file icon. This will take you to the familiar menu, and navigate to `vols_aud` --> `kaneff01` --> `bold` --> `aud.sm3.all.lh` --> `FP-NW`, and double-click on `sig.nii.gz`. Then click "Okay" to load the map. It should look something like this: ![fp_nw_nothresh](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/fp_nw_nothresh.png)
-13. Below the "Overlay" dropdown menu, you should now see a button called "Configure." Click on this, and it should open a menu that looks like this: ![configure](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/configure.png)
-14. Now, just like in the volume data, set the "min" to `3` and the "max" to `5`. Then click "Apply," and close the "Configure" window. Now, your surface map should look like this: ![fp_nw_thresh](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/fp_nw_thresh.png)
+12. Now, confusingly, instead of loading another surface to visualize the aud.sm3.all.lh results, we have to load them as an "Overlay." To do that, click on the "Overlay" dropdown menu in the gray left-hand column and select "Load generic," then click on the file icon. This will take you to the familiar menu, and navigate to `vols_aud` --> `kaneff01` --> `bold` --> `aud.sm3.all.lh` --> `FP-NW`, and double-click on `sig.nii.gz`. Then click "Okay" to load the map. It should look something like this: ![fp_nw_nothresh](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/fp_nw_nothresh.png)
+13. Below the "Overlay" dropdown menu, you should now see a button called "Configure." Click on this, and it should open a menu that looks like this: ![configure](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/configure.png)
+14. Now, just like in the volume data, set the "min" to `3` and the "max" to `5`. Then click "Apply," and close the "Configure" window. Now, your surface map should look like this: ![fp_nw_thresh](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/fp_nw_thresh.png)
 15. This red-yellow collection of blobs is [the core language network](https://www.pnas.org/doi/10.1073/pnas.1112937108)!
 > * For a more recent review of the language network, see [this paper](https://pubmed.ncbi.nlm.nih.gov/38609551/)!
 
@@ -253,7 +253,7 @@ There are a few key steps in this function, which you shouldn't have to make any
 > * `convert_parcels_final.m`: this script takes in a subject name and actually creates the subject-space parcels. You can just run this in an interactive Matlab session; it will take around 30 minutes to complete. When this successfully completes, you should see your parcels under: `{project_dir}/parcels/{subj}/`.
 > * **Note:** there are a couple of places in both the Matlab scripts that reference files under the `vols_vis` directory; for other projects, you'll just need to change the `vis` part to the name of your contrast directories and the rest should work fine! This is because we need to point the transforms to some functional data.
 4. To copy the parcels to your `{project_dir}`, run the following command: `scp -r /orcd/data/ngk/001/projects/efficient_localizer/parcels {project_dir}`
-5. We can visualize these subject-space parcels with `freeview` just like regular volume maps to make sure the process ran correctly. Try visualizing the `rh.ffa_functional.nii.gz` parcel as a heatmap volume, under `{project_dir}/parcels/kaneff01/julian_parcels/`. It should look like this: ![ffa_parcel](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/ffa_parcel.png)
+5. We can visualize these subject-space parcels with `freeview` just like regular volume maps to make sure the process ran correctly. Try visualizing the `rh.ffa_functional.nii.gz` parcel as a heatmap volume, under `{project_dir}/parcels/kaneff01/julian_parcels/`. It should look like this: ![ffa_parcel](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/ffa_parcel.png)
 > * Try overlaying the Faces > Object contrast results here—you should find that the majority of the positive activation we saw in the ventral temporal cortex earlier lands within this parcel!
 > * These ventral visual pathway parcels are called the Julian parcels, named for [this paper](https://pubmed.ncbi.nlm.nih.gov/22398396/).
 
@@ -262,4 +262,4 @@ There are a few key steps in this function, which you shouldn't have to make any
 2. I've written a template notebook with a lot of helpful functions, called `froi_analyses.ipynb`, which you can find in `/orcd/data/ngk/001/shared/samhutch_fmri_scripts`. Go ahead and copy this notebook to your `{project_dir}/scripts` directory and open it with Jupyter.
 3. The notebook uses the `nibabel` package to load the `.nii.gz` files created by Freesurfer as numpy arrays, which makes it super easy to do stats and incorporate with other packages.
 4. Go ahead and run each cell, reading the comments carefully to understand what's going on. In brief, we want to select voxels from **even runs** of our experiment which show a significant Faces > Objects contrast, then measure their responses during the **odd runs** of our experiment. This helps us stay statistically legitimate and avoid double-dipping (i.e. makes sure we're not just measuring noise)!
-5. By the end, you should end up with these plots, showing us that we have indeed found the FFA in our subject! ![bar_thresh](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/bar_thresh.png) ![bar_topn](https://github.com/samhutch511/kanwisher_lab_fmri/tree/main/tutorial_figures/bar_topn.png)
+5. By the end, you should end up with these plots, showing us that we have indeed found the FFA in our subject! ![bar_thresh](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/bar_thresh.png) ![bar_topn](https://github.com/samhutch511/kanwisher_lab_fmri/blob/main/tutorial_figures/bar_topn.png)
